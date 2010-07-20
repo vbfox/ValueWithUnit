@@ -1,0 +1,135 @@
+﻿<#@ template language="C#" hostspecific="True" #>
+<#@ output extension=".cs" #>
+<#@ include file="TextUtils.tt" #>
+<#@ include file="QuantitiesAndUnits.tt" #>
+
+namespace BlackFox.Units
+{
+	using System;
+	using BlackFox.Units.Multiples;
+
+	<#
+	foreach(var unit in AllUnits)
+	{
+		if (!unit.IsBaseUnit)
+		{
+			WriteLine("namespace Multiples");
+			WriteLine("{");
+		}	
+		#>
+
+		public struct <#=unit.ValueClassName#> : IValueWithUnit, IEquatable< <#=unit.ValueClassName#> >, IEquatable<IValueWithUnit>
+		{
+			public static readonly <#=unit.ValueClassName#> Zero = new <#=unit.ValueClassName#>(0);
+			public static readonly <#=unit.ValueClassName#> One = new <#=unit.ValueClassName#>(1);
+
+			readonly internal double value;
+			public double Value { get { return value; } }
+
+			public Unit Unit { get { return <#=unit.Quantity.Name#>.Units.<#=LowerFirst(unit.BaseName)#>; } }
+
+			public <#=unit.ValueClassName#>(double value)
+			{
+				this.value = value;
+			}
+
+			public override string ToString()
+			{
+				return string.Format("{0} <#=unit.Symbol#>", value);
+			}
+
+			IValueWithUnit IValueWithUnit.ToBaseUnit()
+			{
+				<#if(unit.IsBaseUnit)
+				{
+					#>
+					return this;
+					<#
+				}
+				else
+				{
+					#>
+					return this.ToBaseUnit();
+					<#
+				}
+				#>
+			}
+
+			<#if(!unit.IsBaseUnit)
+			{
+				#>
+				public <#=unit.Quantity.BaseUnit.ValueClassName#> ToBaseUnit()
+				{
+					return new <#=unit.Quantity.BaseUnit.ValueClassName#>(<#=unit.GetConversionTo("this.value", unit.Quantity.BaseUnit)#>);
+				}
+				<#
+			}#>
+
+			public bool Equals(<#=unit.ValueClassName#> other)
+			{
+				if (ReferenceEquals(other, null)) return false;
+				else return other.value == value;
+			}
+			
+			public bool Equals(IValueWithUnit other)
+			{
+				if (ReferenceEquals(other, null)) return false;
+				else return false;
+			}
+			
+			public override bool Equals(object other)
+			{
+				return Equals(other as IValueWithUnit);
+			}
+			
+			public override int GetHashCode()
+			{
+				return value.GetHashCode();
+			}
+
+			public static implicit operator <#=unit.ValueClassName#>(double value)
+			{
+				return new <#=unit.ValueClassName#>(value);
+			}
+
+			public static <#=unit.ValueClassName#> operator *(<#=unit.ValueClassName#> value, double times)
+			{
+				return new <#=unit.ValueClassName#>(value.value * times);
+			}
+
+			public static <#=unit.ValueClassName#> operator *(double times, <#=unit.ValueClassName#> value)
+			{
+				return new <#=unit.ValueClassName#>(value.value * times);
+			}
+
+			public static <#=unit.ValueClassName#> operator +(<#=unit.ValueClassName#> first, <#=unit.ValueClassName#> second)
+			{
+				return new <#=unit.ValueClassName#>(first.value * second.value);
+			}
+
+			<#foreach(var otherUnit in unit.OtherUnitsInQuantity)
+			{
+				#>
+				public static implicit operator <#=otherUnit.ValueClassName#>(<#=unit.ValueClassName#> value)
+				{
+					return <#=unit.GetConversionTo("value.value", otherUnit)#>;
+				}
+
+				public static <#=unit.ValueClassName#> operator +(<#=unit.ValueClassName#> first, <#=otherUnit.ValueClassName#> second)
+				{
+					return new <#=unit.ValueClassName#>(first.value + <#=otherUnit.GetConversionTo("second.value", unit)#>);
+				}
+				<#
+			}
+			
+			#>
+		}
+		<#
+			
+		if (!unit.IsBaseUnit)
+		{
+			WriteLine("}");
+		}			
+	}
+	#>
+}

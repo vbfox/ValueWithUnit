@@ -1,0 +1,46 @@
+﻿<#@ template language="C#" hostspecific="True" #>
+<#@ output extension=".cs" #>
+
+<#@ include file="TextUtils.tt" #>
+<#@ include file="QuantitiesAndUnits.tt" #>
+
+namespace BlackFox.Units
+{
+	using BlackFox.Units.Multiples;
+	
+	<#
+	foreach(var quantity in Quantities)
+	{
+		#>
+		public class <#=quantity.Name#>
+		{
+			public static class Units
+			{
+				<#
+				foreach(var unit in quantity.Units)
+				{
+					#>
+					internal static <#=unit.UnitClassName#> <#=LowerFirst(unit.BaseName)#> = new <#=unit.UnitClassName#>();
+					public static <#=unit.UnitClassName#> <#=unit.BaseName#> { get { return <#=LowerFirst(unit.BaseName)#>; } }
+					<#
+				}
+				#>
+			}
+		
+			public static Unit BaseUnit { get { return Units.<#=LowerFirst(quantity.BaseUnit.BaseName)#>; } }
+
+			<#
+			foreach(var unit in quantity.Units)
+			{
+				#>
+				static <#=unit.ValueClassName#> <#=LowerFirst(unit.BaseName)#> = new <#=unit.ValueClassName#>(1.0);
+				public static <#=unit.ValueClassName#> <#=unit.BaseName#> { get { return <#=LowerFirst(unit.BaseName)#>; } }
+				<#
+			}
+			#>
+
+		}
+		<#
+	}
+	#>
+}

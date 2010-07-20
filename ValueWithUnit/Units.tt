@@ -1,0 +1,33 @@
+﻿<#@ template language="C#" hostspecific="True" #>
+<#@ output extension=".cs" #>
+<#@ include file="TextUtils.tt" #>
+<#@ include file="QuantitiesAndUnits.tt" #>
+
+namespace BlackFox.Units
+{
+	using System;
+	using BlackFox.Units.Multiples;
+
+	<#
+	foreach(var unit in AllUnits)
+	{
+		if (!unit.IsBaseUnit)
+		{
+			WriteLine("namespace Multiples");
+			WriteLine("{");
+		}	
+		#>
+
+		public class <#=unit.UnitClassName#> : Unit
+		{
+		
+		}
+
+		<#
+		if (!unit.IsBaseUnit)
+		{
+			WriteLine("}");
+		}				
+	}
+	#>
+}

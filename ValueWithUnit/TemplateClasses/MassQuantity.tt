@@ -1,0 +1,38 @@
+﻿<#+
+
+class MassQuantity : Quantity
+{
+	public MassQuantity()
+		: base("Mass", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	{
+		var unitNameBasis = "gram";
+		var unitSymbolBasis = "g";
+		
+		Add(UpperFirst(unitNameBasis), unitSymbolBasis, 1.0);
+
+		Add("Yocto" + unitNameBasis, "y" + unitSymbolBasis, 1e-24);
+		Add("Zepto" + unitNameBasis, "z" + unitSymbolBasis, 1e-21);
+		Add("Atto" + unitNameBasis, "a" + unitSymbolBasis, 1e-18);
+		Add("Femto" + unitNameBasis, "f" + unitSymbolBasis, 1e-15);
+		Add("Pico" + unitNameBasis, "p" + unitSymbolBasis, 1e-12);
+		Add("Nano" + unitNameBasis, "n" + unitSymbolBasis, 1e-9);
+		Add("Micro" + unitNameBasis, "µ" + unitSymbolBasis, 1e-6);
+		Add("Milli" + unitNameBasis, "m" + unitSymbolBasis, 1e-3);
+		Add("Centi" + unitNameBasis, "c" + unitSymbolBasis, 1e-2);
+		Add("Deci" + unitNameBasis, "d" + unitSymbolBasis, 1e-1);
+
+		Add("Deca" + unitNameBasis, "da" + unitSymbolBasis, 1e1);
+		Add("Hecto" + unitNameBasis, "h" + unitSymbolBasis, 1e2);
+		var kiloUnit = Add("Kilo" + unitNameBasis, "k" + unitSymbolBasis, 1e3);
+		kiloUnit.IsBaseUnit = true;
+		Add("Mega" + unitNameBasis, "M" + unitSymbolBasis, 1e6);
+		Add("Giga" + unitNameBasis, "G" + unitSymbolBasis, 1e9);
+		Add("Tera" + unitNameBasis, "T" + unitSymbolBasis, 1e12);
+		Add("Peta" + unitNameBasis, "P" + unitSymbolBasis, 1e15);
+		Add("Exa" + unitNameBasis, "E" + unitSymbolBasis, 1e18);
+		Add("Zetta" + unitNameBasis, "Z" + unitSymbolBasis, 1e21);
+		Add("Yotta" + unitNameBasis, "Y" + unitSymbolBasis, 1e24);
+	}
+}
+
+#>

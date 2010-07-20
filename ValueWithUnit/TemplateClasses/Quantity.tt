@@ -1,0 +1,43 @@
+﻿<#+
+
+class Quantity : IEnumerable<Unit>
+{
+	public int[] Equation { get; private set; }
+
+	public string Name { get; set; }
+	public List<Unit> Units { get; private set; }
+	public Quantity(string name, int m = 0, int kg = 0, int s = 0, int A = 0, int K = 0, int mol = 0, int cd = 0,
+		int rad = 0, int sr = 0, int ampRatio = 0, int powRatio = 0)
+	{
+		Name = name;
+		Units = new List<Unit>();
+		Equation = new [] { m, kg, s, A, K, mol, cd, rad, sr, ampRatio, powRatio };
+	}
+
+	public void Add(Unit unit)
+	{
+		unit.Quantity = this;
+		Units.Add(unit);
+	}
+
+	public Unit Add(string baseName, string symbol, double a = 1.0, double b = 0.0)
+	{
+		var unit = new Unit(baseName, symbol, a, b);
+		Add(unit);
+		return unit;
+	}
+
+	IEnumerator<Unit> IEnumerable<Unit>.GetEnumerator()
+	{
+		return Units.GetEnumerator();
+	}
+
+	IEnumerator IEnumerable.GetEnumerator()
+	{
+		return Units.GetEnumerator();
+	}
+
+	public Unit BaseUnit { get { return this.Units.First(u => u.IsBaseUnit); } }
+}
+
+#>

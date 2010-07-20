@@ -1,0 +1,45 @@
+﻿<#@ assembly name="System.Core.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+
+<#@ include file="TemplateClasses\Quantity.tt" #>
+<#@ include file="TemplateClasses\Unit.tt" #>
+<#@ include file="TemplateClasses\MassQuantity.tt" #>
+<#@ include file="TemplateClasses\SimpleQuantity.tt" #>
+
+<#+
+
+IEnumerable<Quantity> BaseQuantities
+{
+	get
+	{
+		return new Quantity[] {
+			new SimpleQuantity("Length", "metre", "m", m:1),
+			new SimpleQuantity("Time", "second", "s", s:1),
+			new MassQuantity(),
+			new SimpleQuantity("ElectricCurrent", "ampere", "A", A: 1),
+			new SimpleQuantity("ThermodynamicTemperature", "kelvin", "K", K: 1),
+			new SimpleQuantity("LuminousIntensity", "candela", "cd", cd: 1),
+			new SimpleQuantity("AmountOfSubstance", "mole", "mol", mol: 1),
+		};
+	}
+}
+
+IEnumerable<Quantity> Quantities
+{
+	get
+	{
+		return BaseQuantities;
+	}
+}
+
+IEnumerable<Unit> AllUnits
+{
+	get { return Quantities.SelectMany(m => m.Units); }
+}
+
+#>

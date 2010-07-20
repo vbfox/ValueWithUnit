@@ -1,0 +1,17 @@
+﻿<#+
+
+static string LowerFirst(string s)
+{
+	if (string.IsNullOrEmpty(s)) return s;
+	else if (s.Length == 1) return s.ToLower();
+	else return Char.ToLower(s[0]) + s.Substring(1);
+}
+
+static string UpperFirst(string s)
+{
+	if (string.IsNullOrEmpty(s)) return s;
+	else if (s.Length == 1) return s.ToLower();
+	else return Char.ToUpper(s[0]) + s.Substring(1);
+}
+
+#>

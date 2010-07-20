@@ -1,0 +1,105 @@
+﻿Units have Multiples and Submultiples (NS)
+
+--------------
+
+Il faut une conversion explicite de
+IValueWithUnit -> DerivedUnit
+Par exemple 
+	IValueWithUnit icePoint = 273.15 * ThermodynamicTemperature.Kelvin
+	Celsius = (DerivedUnit)(-icePoint);
+
+--------------
+
+
+Length : Metre (m)
+Mass : KiloGram (kg)
+Time : Second (s)
+ElectricCurrent : Ampere (A)
+ThermodynamicTemperature : Kelvin (K)
+AmountOfSubstance : Mole (mol)
+LuminousIntensity : Candela (cd)
+
+
+Frequency : Hertz (Hz) = 1/Time
+Force : Newton (N) = Length * Mass / (Time*Time)
+Pressure : Pascal (Pa) = 1/Length * Mass / (Time*Time)
+Energy : Joule (J) = Length * Length * Mass / (Time*Time)
+Power : Watt (W) = Length * Length * Mass / (Time*Time*Time)
+ElectricCharge : Coulomb (C)
+
+IcePoint = 273.15 * Kelvin
+Celsius = Kelvin - IcePoint
+
+
+Quantities
+Qui ont une BaseUnit et des DerivedUnit
+
+namespace Units
+{
+	class Quantity {}
+	class BaseQuantity : Quantity {}
+	class DerivedQuantiy : Quantity {}
+
+	class Length : BaseQuantity
+	{
+		class MetreUnit : BaseUnit
+		{
+			class KilometreUnit : DerivedUnit
+			{
+				
+			}
+
+			static DerivedUnit Kilo
+			static DerivedUnit Mili
+		}
+
+		static MetreUnit Metre
+	}
+
+
+	class
+
+
+	class Unit
+	class BaseUnit : Unit {}
+	class DerivedUnit : Unit {}
+
+	class NoUnit : Unit {}
+
+	class SIUnits
+	{
+		BaseUnit Metre
+		BaseUnit KiloGram
+		BaseUnit Second
+	}
+
+
+
+	class NoQuantity : Quantity {}
+
+	namespace SI
+	{
+		class Metres : BaseQuantity {}
+		class KiloGrams : BaseQuantity {}
+		class Seconds : BaseQuantity {}
+
+		namespace Mutiples
+		{
+			class KiloMetres : DerivedQuantiy {}
+			class MiliMetres : DerivedQuantiy {}
+		}
+
+		namespace Derived
+		{
+			
+		}
+	}
+
+
+
+	
+			Units.SI.Metre <- Unit
+			Units.SI.Metres <- Quantity
+Units.SI.Multiples.KiloMetre <- Unit
+Units.SI.Multiples.KiloMetres <- Quantity
+

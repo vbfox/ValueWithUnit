@@ -1,0 +1,67 @@
+﻿<#+
+
+class Unit
+{
+	public double A { get; private set; }
+	public double B { get; private set; }
+	public string BaseName { get; private set; }
+	public string UnitClassName { get { return BaseName + "Unit"; } }
+	public string ValueClassName { get { return BaseName + "s"; } }
+	public string Symbol { get; private set; }
+	public Quantity Quantity { get; set; }
+
+	public Unit(string baseName, string symbol, double a = 1.0, double b = 0.0)
+	{
+		Debug.Assert(a != 0.0);
+		BaseName = baseName;
+		Symbol = symbol;
+
+		A = a;
+		B = b;
+	}
+
+	public virtual bool IsBaseUnit { get; set; }
+	
+	public IEnumerable<Unit> OtherUnitsInQuantity
+	{
+		get { return Quantity.Units.Where(u => u != this); }
+	}
+
+	public string GetConversionTo(string variableName, Unit other)
+	{
+		// u2 = (u1 + b1) * a2/a1 + b2
+		var a1 = other.A; var a2 = this.A;
+		var b1 = other.B; var b2 = this.B;
+
+		var result = new StringBuilder();
+		result.AppendFormat("({0}", variableName);
+		if (b1 != 0.0)
+		{
+			result.AppendFormat(" + {0}", b1);
+		}
+		result.Append(")");
+
+		if ( (a2 != 1.0) && (a1 != 1.0) )
+		{
+			//result.AppendFormat("*{0}/{1}", a2, a1);
+			result.AppendFormat("*{0}", a2/a1);
+		}
+		else if (a2 != 1.0)
+		{
+			result.AppendFormat("*{0}", a2);
+		}
+		else if (a1 != 1.0)
+		{
+			result.AppendFormat("/{0}", a1);
+		}
+
+		if (b2 != 0.0)
+		{
+			result.AppendFormat(" + {0}", b2);
+		}
+
+		return result.ToString();
+	}
+}
+
+#>
