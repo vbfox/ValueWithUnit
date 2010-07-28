@@ -6,6 +6,7 @@ using NUnit.Framework;
 using BlackFox.Units;
 using BlackFox.Units.Multiples;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 namespace Tests
 {
@@ -89,6 +90,25 @@ namespace Tests
         {
             Assert.That(Length.Metre.ToString(), Is.EqualTo("1 m"));
             Assert.That((500*Length.Kilometre).ToString(), Is.EqualTo("500 km"));
+        }
+
+        [Test]
+        public void ToStringWithFormat()
+        {
+            Assert.That((500 * Length.Kilometre).ToString("0", CultureInfo.InvariantCulture), Is.EqualTo("500 km"));
+            Assert.That((500 * Length.Kilometre).ToString("0.##", CultureInfo.InvariantCulture), Is.EqualTo("500 km"));
+            Assert.That((500 * Length.Kilometre).ToString("0.0", CultureInfo.InvariantCulture), Is.EqualTo("500.0 km"));
+            Assert.That((500 * Length.Kilometre).ToString("A0.0B", CultureInfo.InvariantCulture), Is.EqualTo("A500.0B km"));
+        }
+
+        [Test]
+        public void ToStringWithCulture()
+        {
+            var fr = CultureInfo.GetCultureInfoByIetfLanguageTag("fr-FR");
+            Assert.That((500 * Length.Kilometre).ToString("0", fr), Is.EqualTo("500 km"));
+            Assert.That((500 * Length.Kilometre).ToString("0.##", fr), Is.EqualTo("500 km"));
+            Assert.That((500 * Length.Kilometre).ToString("0.0", fr), Is.EqualTo("500,0 km"));
+            Assert.That((500 * Length.Kilometre).ToString("A0.0B", fr), Is.EqualTo("A500,0B km"));
         }
     }
 }

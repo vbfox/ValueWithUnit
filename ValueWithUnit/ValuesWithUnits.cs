@@ -5,6 +5,7 @@
 namespace BlackFox.Units
 {
 	using System;
+	using System.Globalization;
 	using BlackFox.Units.Multiples;
 
 	
@@ -25,7 +26,34 @@ namespace BlackFox.Units
 
 			public override string ToString()
 			{
-				return string.Format("{0} m", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} m", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -277,7 +305,34 @@ namespace BlackFox.Units
 
 			public override string ToString()
 			{
-				return string.Format("{0} ym", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ym", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -534,7 +589,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -791,7 +873,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} am", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} am", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -1048,7 +1157,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -1305,7 +1441,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -1562,7 +1725,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} nm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} nm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -1819,7 +2009,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -2076,7 +2293,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -2333,7 +2577,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -2590,7 +2861,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -2847,7 +3145,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dam", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dam", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -3104,7 +3429,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -3361,7 +3713,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} km", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} km", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -3618,7 +3997,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Mm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Mm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -3875,7 +4281,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Gm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Gm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -4132,7 +4565,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Tm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Tm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -4389,7 +4849,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Pm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Pm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -4646,7 +5133,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Em", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Em", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -4903,7 +5417,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Zm", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Zm", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -5160,7 +5701,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ym", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ym", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -5415,7 +5983,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} s", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} s", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -5667,7 +6262,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ys", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ys", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -5924,7 +6546,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -6181,7 +6830,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} as", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} as", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -6438,7 +7114,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -6695,7 +7398,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ps", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ps", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -6952,7 +7682,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ns", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ns", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -7209,7 +7966,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -7466,7 +8250,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ms", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ms", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -7723,7 +8534,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -7980,7 +8818,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ds", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ds", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -8237,7 +9102,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} das", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} das", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -8494,7 +9386,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -8751,7 +9670,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ks", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ks", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -9008,7 +9954,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ms", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ms", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -9265,7 +10238,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Gs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Gs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -9522,7 +10522,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ts", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ts", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -9779,7 +10806,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ps", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ps", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -10036,7 +11090,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Es", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Es", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -10293,7 +11374,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Zs", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Zs", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -10550,7 +11658,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ys", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ys", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -10807,7 +11942,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} g", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} g", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -11064,7 +12226,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} yg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} yg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -11321,7 +12510,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -11578,7 +12794,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ag", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ag", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -11835,7 +13078,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -12092,7 +13362,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -12349,7 +13646,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ng", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ng", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -12606,7 +13930,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -12863,7 +14214,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -13120,7 +14498,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -13377,7 +14782,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -13634,7 +15066,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dag", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dag", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -13891,7 +15350,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -14146,7 +15632,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} kg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} kg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -14398,7 +15911,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Mg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Mg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -14655,7 +16195,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Gg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Gg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -14912,7 +16479,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Tg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Tg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -15169,7 +16763,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Pg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Pg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -15426,7 +17047,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Eg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Eg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -15683,7 +17331,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Zg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Zg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -15940,7 +17615,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Yg", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Yg", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -16195,7 +17897,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} A", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} A", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -16447,7 +18176,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} yA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} yA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -16704,7 +18460,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -16961,7 +18744,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} aA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} aA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -17218,7 +19028,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -17475,7 +19312,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -17732,7 +19596,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} nA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} nA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -17989,7 +19880,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -18246,7 +20164,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -18503,7 +20448,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -18760,7 +20732,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -19017,7 +21016,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} daA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} daA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -19274,7 +21300,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -19531,7 +21584,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} kA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} kA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -19788,7 +21868,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} MA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} MA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -20045,7 +22152,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} GA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} GA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -20302,7 +22436,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} TA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} TA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -20559,7 +22720,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} PA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} PA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -20816,7 +23004,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} EA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} EA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -21073,7 +23288,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ZA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ZA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -21330,7 +23572,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} YA", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} YA", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -21585,7 +23854,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} K", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} K", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -21837,7 +24133,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} yK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} yK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -22094,7 +24417,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -22351,7 +24701,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} aK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} aK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -22608,7 +24985,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -22865,7 +25269,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -23122,7 +25553,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} nK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} nK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -23379,7 +25837,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -23636,7 +26121,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -23893,7 +26405,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -24150,7 +26689,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -24407,7 +26973,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} daK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} daK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -24664,7 +27257,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -24921,7 +27541,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} kK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} kK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -25178,7 +27825,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} MK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} MK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -25435,7 +28109,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} GK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} GK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -25692,7 +28393,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} TK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} TK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -25949,7 +28677,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} PK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} PK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -26206,7 +28961,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} EK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} EK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -26463,7 +29245,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ZK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ZK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -26720,7 +29529,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} YK", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} YK", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -26975,7 +29811,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -27227,7 +30090,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ycd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ycd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -27484,7 +30374,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -27741,7 +30658,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} acd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} acd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -27998,7 +30942,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -28255,7 +31226,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -28512,7 +31510,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ncd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ncd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -28769,7 +31794,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -29026,7 +32078,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -29283,7 +32362,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ccd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ccd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -29540,7 +32646,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -29797,7 +32930,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dacd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dacd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -30054,7 +33214,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -30311,7 +33498,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} kcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} kcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -30568,7 +33782,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Mcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Mcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -30825,7 +34066,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Gcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Gcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -31082,7 +34350,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Tcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Tcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -31339,7 +34634,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Pcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Pcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -31596,7 +34918,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ecd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ecd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -31853,7 +35202,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Zcd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Zcd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -32110,7 +35486,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ycd", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ycd", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -32365,7 +35768,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -32617,7 +36047,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} ymol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} ymol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -32874,7 +36331,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} zmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} zmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -33131,7 +36615,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} amol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} amol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -33388,7 +36899,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} fmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} fmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -33645,7 +37183,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} pmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} pmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -33902,7 +37467,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} nmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} nmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -34159,7 +37751,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} µmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} µmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -34416,7 +38035,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} mmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} mmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -34673,7 +38319,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} cmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} cmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -34930,7 +38603,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} dmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} dmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -35187,7 +38887,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} damol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} damol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -35444,7 +39171,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} hmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} hmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -35701,7 +39455,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} kmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} kmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -35958,7 +39739,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Mmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Mmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -36215,7 +40023,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Gmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Gmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -36472,7 +40307,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Tmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Tmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -36729,7 +40591,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Pmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Pmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -36986,7 +40875,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Emol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Emol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -37243,7 +41159,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Zmol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Zmol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
@@ -37500,7 +41443,34 @@ namespace Multiples
 
 			public override string ToString()
 			{
-				return string.Format("{0} Ymol", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} Ymol", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()

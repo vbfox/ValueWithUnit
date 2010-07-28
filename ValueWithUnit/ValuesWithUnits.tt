@@ -6,6 +6,7 @@
 namespace BlackFox.Units
 {
 	using System;
+	using System.Globalization;
 	using BlackFox.Units.Multiples;
 
 	<#
@@ -35,7 +36,34 @@ namespace BlackFox.Units
 
 			public override string ToString()
 			{
-				return string.Format("{0} <#=unit.Symbol#>", value);
+				return ToStringCore("G", CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(IFormatProvider provider)
+			{
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore("G", provider);
+			}
+
+			public string ToString(string format)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+
+				return ToStringCore(format, CultureInfo.CurrentCulture);
+			}
+
+			public string ToString(string format, IFormatProvider provider)
+			{
+				if (format == null) throw new ArgumentNullException("format");
+				if (provider == null) throw new ArgumentNullException("provider");
+
+				return ToStringCore(format, provider);
+			}
+
+			string ToStringCore(string format, IFormatProvider provider)
+			{
+				return string.Format("{0} <#=unit.Symbol#>", value.ToString(format, provider));
 			}
 
 			IValueWithUnit IValueWithUnit.ToBaseUnit()
