@@ -70,5 +70,35 @@
         {
             return string.Format("{0} {1}", value.ToString(format, provider), unit.Symbol);
         }
+
+        public static ValueWithUnit operator *(ValueWithUnit v, double d)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static ValueWithUnit operator /(ValueWithUnit v, double d)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static ValueWithUnit operator +(ValueWithUnit v1, ValueWithUnit v2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static ValueWithUnit operator -(ValueWithUnit v1, ValueWithUnit v2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static ValueWithUnit operator *(ValueWithUnit v1, ValueWithUnit v2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static ValueWithUnit operator /(ValueWithUnit v1, ValueWithUnit v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
