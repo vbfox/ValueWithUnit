@@ -37,7 +37,7 @@ class Quantity : IEnumerable<Unit>
 		return Units.GetEnumerator();
 	}
 
-	public Unit BaseUnit { get { return this.Units.First(u => u.IsBaseUnit); } }
+	public Unit BaseUnit { get { return this.Units.Single(u => u.IsBaseUnit); } }
 }
 
 #>
