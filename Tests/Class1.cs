@@ -47,7 +47,7 @@ namespace Tests
         }*/
 
         [Test]
-        public void Small()
+        public void SizeOfSpecificValueWithUnitNotBiggerThanDouble()
         {
             Assert.That(Marshal.SizeOf(Metres.Zero), Is.EqualTo(Marshal.SizeOf(0.0)));
         }
@@ -64,6 +64,14 @@ namespace Tests
         {
             Metres m = Length.Metre;
             Kilometres km = Length.Metre;
+        }
+
+        [Test]
+        public void MultiplyValueAndUnit()
+        {
+            var km = 42 * Length.Kilometre;
+            Assert.That(km.Unit, Is.EqualTo(Length.Units.Kilometre));
+            Assert.That(km.Value, Is.EqualTo(42));
         }
 
         [Test]
