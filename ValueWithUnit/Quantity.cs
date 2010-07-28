@@ -9,7 +9,7 @@
 
     abstract class Quantity
     {
-        abstract string Name { get; }
+        public abstract string Name { get; }
     }
     abstract class BaseQuantity : Quantity { }
     abstract class DerivedQuantiy : Quantity { }
