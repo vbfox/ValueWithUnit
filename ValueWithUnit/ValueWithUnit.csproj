@@ -8,8 +8,8 @@
     <ProjectGuid>{E51432A1-109B-4B75-9051-3D97724A0DEC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test_ValueWithUnit</RootNamespace>
-    <AssemblyName>Test_ValueWithUnit</AssemblyName>
+    <RootNamespace>BlackFox.Units</RootNamespace>
+    <AssemblyName>BlackFox.Units</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

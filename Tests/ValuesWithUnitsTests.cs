@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
-using BlackFox.Units;
-using BlackFox.Units.Multiples;
-using System.Runtime.InteropServices;
-using System.Globalization;
-
-namespace Tests
+﻿namespace BlackFox.Units.Tests
 {
-    [TestFixture]
-    public class Class1
-    {
-        [Test]
-        public void BaseQuantitiesSI()
-        {
-            Assert.That(Length.BaseUnit, Is.EqualTo(Length.Units.Metre));
-            Assert.That(Mass.BaseUnit, Is.EqualTo(Mass.Units.Kilogram));
-        }
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using NUnit.Framework;
+    using BlackFox.Units;
+    using BlackFox.Units.Multiples;
+    using System.Runtime.InteropServices;
+    using System.Globalization;
 
+    [TestFixture]
+    public class ValuesWithUnitsTests
+    {
         [Test]
         public void BaseQuantities()
         {

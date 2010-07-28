@@ -8,8 +8,8 @@
     <ProjectGuid>{DCBECA00-1FAD-44E8-B749-E16F8447A2D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tests</RootNamespace>
-    <AssemblyName>Tests</AssemblyName>
+    <RootNamespace>BlackFox.Units.Tests</RootNamespace>
+    <AssemblyName>BlackFox.Units.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ValuesWithUnitsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quantities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ValueWithUnit\ValueWithUnit.csproj">
