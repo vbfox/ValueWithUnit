@@ -5,7 +5,10 @@
     using System.Linq;
     using System.Text;
 
-    public class Unit { }
+    public abstract class Unit
+    {
+        public abstract string Symbol { get; }
+    }
 
     abstract class Quantity
     {

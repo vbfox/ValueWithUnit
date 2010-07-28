@@ -20,7 +20,7 @@ namespace BlackFox.Units
 
 		public class <#=unit.UnitClassName#> : Unit
 		{
-		
+			public override string Symbol { get { return "<#=unit.Symbol#>"; } }
 		}
 
 		<#
