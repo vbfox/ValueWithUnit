@@ -9,7 +9,14 @@
     public struct ValueWithUnit : IValueWithUnit
     {
         readonly Unit unit;
-        public Unit Unit { get { return unit; } }
+        public Unit Unit
+        {
+            get
+            {
+                if (unit == null) return NoUnit.Instance;
+                return unit;
+            }
+        }
 
         readonly double value;
         public double Value { get { return value; } }

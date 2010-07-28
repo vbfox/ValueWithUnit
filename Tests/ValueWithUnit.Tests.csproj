@@ -46,7 +46,8 @@
   <ItemGroup>
     <Compile Include="ValuesWithUnitsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quantities.cs" />
+    <Compile Include="QuantitiesTests.cs" />
+    <Compile Include="ValueWithUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ValueWithUnit\ValueWithUnit.csproj">
