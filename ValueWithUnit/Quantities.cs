@@ -55,6 +55,7 @@ namespace BlackFox.Units
 					public static YottametreUnit Yottametre { get { return yottametre; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.metre; } }
 
 							static Metres metre = new Metres(1.0);
@@ -149,6 +150,7 @@ namespace BlackFox.Units
 					public static YottasecondUnit Yottasecond { get { return yottasecond; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.second; } }
 
 							static Seconds second = new Seconds(1.0);
@@ -243,6 +245,7 @@ namespace BlackFox.Units
 					public static YottagramUnit Yottagram { get { return yottagram; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.kilogram; } }
 
 							static Grams gram = new Grams(1.0);
@@ -337,6 +340,7 @@ namespace BlackFox.Units
 					public static YottaampereUnit Yottaampere { get { return yottaampere; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.ampere; } }
 
 							static Amperes ampere = new Amperes(1.0);
@@ -431,6 +435,7 @@ namespace BlackFox.Units
 					public static YottakelvinUnit Yottakelvin { get { return yottakelvin; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.kelvin; } }
 
 							static Kelvins kelvin = new Kelvins(1.0);
@@ -525,6 +530,7 @@ namespace BlackFox.Units
 					public static YottacandelaUnit Yottacandela { get { return yottacandela; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.candela; } }
 
 							static Candelas candela = new Candelas(1.0);
@@ -619,6 +625,7 @@ namespace BlackFox.Units
 					public static YottamoleUnit Yottamole { get { return yottamole; } }
 								}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.mole; } }
 
 							static Moles mole = new Moles(1.0);

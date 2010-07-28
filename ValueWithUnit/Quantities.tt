@@ -27,6 +27,7 @@ namespace BlackFox.Units
 				#>
 			}
 		
+			/// <summary>Get the base SI <see cref="Unit" />.</summary>
 			public static Unit BaseUnit { get { return Units.<#=LowerFirst(quantity.BaseUnit.BaseName)#>; } }
 
 			<#
