@@ -5,6 +5,7 @@
 <#@ import namespace="System.Diagnostics" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
+<#@ import namespace="System.Globalization" #>
 
 <#@ include file="TemplateClasses\Quantity.tt" #>
 <#@ include file="TemplateClasses\Unit.tt" #>

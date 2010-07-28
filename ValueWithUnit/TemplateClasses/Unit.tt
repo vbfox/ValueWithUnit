@@ -37,27 +37,27 @@ class Unit
 		result.AppendFormat("({0}", variableName);
 		if (b1 != 0.0)
 		{
-			result.AppendFormat(" + {0}", b1);
+			result.Append(string.Format(CultureInfo.InvariantCulture, " + {0}", b1));
 		}
 		result.Append(")");
 
 		if ( (a2 != 1.0) && (a1 != 1.0) )
 		{
 			//result.AppendFormat("*{0}/{1}", a2, a1);
-			result.AppendFormat("*{0}", a2/a1);
+			result.Append(string.Format(CultureInfo.InvariantCulture, "*{0}", a2/a1));
 		}
 		else if (a2 != 1.0)
 		{
-			result.AppendFormat("*{0}", a2);
+			result.Append(string.Format(CultureInfo.InvariantCulture, "*{0}", a2));
 		}
 		else if (a1 != 1.0)
 		{
-			result.AppendFormat("/{0}", a1);
+			result.Append(string.Format(CultureInfo.InvariantCulture, "/{0}", a1));
 		}
 
 		if (b2 != 0.0)
 		{
-			result.AppendFormat(" + {0}", b2);
+			result.Append(string.Format(CultureInfo.InvariantCulture, " + {0}", b2));
 		}
 
 		return result.ToString();
