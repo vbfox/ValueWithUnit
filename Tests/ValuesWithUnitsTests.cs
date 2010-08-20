@@ -19,7 +19,7 @@
             var value = 3 * Length.Centimetre;
 
             Assert.That(value.Unit, Is.TypeOf<CentimetreUnit>());
-            Assert.That(value.Unit, Is.EqualTo(Length.Centimetre));
+            Assert.That(value.Unit, Is.EqualTo(Length.Units.Centimetre));
         }
         /*
         [Test]

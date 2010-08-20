@@ -54,10 +54,11 @@
         public void ToBaseUnit()
         {
             IValueWithUnit v = new ValueWithUnit(1000, Time.Units.Millisecond);
-            var b = v.ToBaseUnit();
-
+            
             Assert.That(v.Value, Is.EqualTo(1000.0));
             Assert.That(v.Unit, Is.EqualTo(Time.Units.Millisecond));
+
+            var b = v.ToBaseUnit();
 
             Assert.That(b.Value, Is.EqualTo(1.0));
             Assert.That(b.Unit, Is.EqualTo(Time.Units.Second));
