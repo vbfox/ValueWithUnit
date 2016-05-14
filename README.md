@@ -12,14 +12,16 @@ Such structures should :
 * Keep all operations working in this generic structure.
 * Allow special no units to be keept and act naturally (radians, steradians, power ratio, ...)
 
-=== Sample
+Sample
+------
+
 The basic target of this library could be explained with this simple sample :
 
------------------------------------------------------
+```csharp
 var c = 299792458.0 * Length.Metre / Time.Second; // Speed of light in vacum
 var au = 149597870.7 * Length.Kilometre; // Astronomical unit (distance between the Earth and the Sun)
 
 var timeForLightToReachEarth = au / c;
  
 Console.WriteLine("Light from the sun travel for {0} before reaching earth", (Seconds)timeForLightToReachEarth);
------------------------------------------------------
+```
